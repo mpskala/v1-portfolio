@@ -39,7 +39,6 @@ const formatDate = (date) => {
 }
 
 const Post = ({ post }) => {
-  console.log(post.datePublished)
   return (
     <Container>
       <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
