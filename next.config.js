@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
+  basePath: '',
+  images: {
+    domains: ['media.graphassets.com'],
+  },
 }
 
 module.exports = nextConfig
