@@ -5,9 +5,9 @@ const Strava = async (req, res) => {
   }
 
   const body = JSON.stringify({
-    client_id: process.env.NEXT_PUBLIC_STRAVA_CLIENT_ID,
-    client_secret: process.env.NEXT_PUBLIC_STRAVA_SECRET,
-    refresh_token: process.env.NEXT_PUBLIC_STRAVA_REFRESH_TOKEN,
+    client_id: process.env.STRAVA_CLIENT_ID,
+    client_secret: process.env.STRAVA_SECRET,
+    refresh_token: process.env.STRAVA_REFRESH_TOKEN,
     grant_type: 'refresh_token',
   })
 
