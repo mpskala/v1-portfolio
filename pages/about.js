@@ -1,6 +1,5 @@
 import Timeline from '/components/Timeline'
 import Container from '/components/Container'
-import AllRun from '/components/strava/AllRunning'
 
 export default function About() {
   return (
@@ -22,18 +21,9 @@ export default function About() {
           </p>
         </div>
 
-        <div className='w-full flex flex-col'>
-          <AllRun />
-
-          <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
-          <span className='w-full text-sm text-gray-500 italic text-center'>
-            All-Time Strava Running Data
-          </span>
-        </div>
-
-        {/* <div className='max-w-2xl'>
+        <div className='max-w-2xl'>
           <Timeline />
-        </div> */}
+        </div>
       </div>
     </Container>
   )

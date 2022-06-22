@@ -29,13 +29,9 @@ const Strava = async (req, res) => {
     )
   ).json()
 
-  const allRide = response.all_ride_totals
   const allRun = response.all_run_totals
 
-  return res.status(200).json({
-    allRide,
-    allRun,
-  })
+  return res.status(200).json({ allRun })
 }
 
 export default Strava
