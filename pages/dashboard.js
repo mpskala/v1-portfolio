@@ -5,8 +5,8 @@ import AllRun from '/components/strava/AllRunning'
 const Dashboard = () => {
   return (
     <Container
-      title='Matthew Skala - Dashboard'
-      description='My personal dashboard, built with Next.js API routes deployed as serverless functions.'
+      title='Matthew Skala - Dashboard.'
+      description='My personal dashboard.'
     >
       <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
         <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white'>
