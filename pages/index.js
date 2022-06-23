@@ -16,7 +16,7 @@ export default function Home() {
             </h2>
             <p className='text-gray-600 dark:text-gray-400 mb-16'>
               Enthusiastic and dedicated computer science graduate &mdash;
-              currently travelling South East Asian whilst training.
+              currently travelling South East Asia whilst training.
             </p>
           </div>
           <div className='w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto'>
