@@ -108,7 +108,7 @@ export default function NowPlaying() {
             </p>
           </a>
         ) : (
-          <div>
+          <div className='flex'>
             <p className='capsize text-gray-800 dark:text-gray-200 font-medium'>
               Not Playing
             </p>
