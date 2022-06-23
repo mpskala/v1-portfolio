@@ -8,7 +8,8 @@ const kmFormatter = (num) => {
 }
 
 const AllRun = () => {
-  const { data, err } = useSWR('/api/strava', fetcher)
+  const { data, err } = useSWR('/api/all-time-run', fetcher)
+
   if (err) return 'an error has occured'
   if (!data) return ''
 
@@ -16,14 +17,14 @@ const AllRun = () => {
     <div className='flex flex-col'>
       <div className='p-2 flex flex-row gap-2 place-content-evenly text-center'>
         <div className='total-runs'>
-          <span className='text-xl md:text-3xl'>{data.allRun.count}</span>{' '}
+          <span className='text-xl md:text-3xl'>{data.count}</span>{' '}
           <span className='text-sm md:text-base text-gray-500 italic'>
             Runs
           </span>
         </div>
         <div className='total-distance'>
           <span className='text-xl md:text-3xl'>
-            {kmFormatter(data.allRun.distance)}
+            {kmFormatter(data.distance)}
           </span>{' '}
           <span className='text-sm md:text-base text-gray-500 italic'>
             Travelled
@@ -31,9 +32,7 @@ const AllRun = () => {
         </div>
         <div className='total-time'>
           <span className='text-xl md:text-3xl'>
-            {new Date(data.allRun.moving_time * 1000)
-              .toISOString()
-              .substr(11, 8)}
+            {new Date(data.moving_time * 1000).toISOString().substr(11, 8)}
           </span>{' '}
           <span className='text-sm md:text-base text-gray-500 italic'>
             Running
