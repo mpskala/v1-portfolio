@@ -16,7 +16,6 @@ const AllRun = () => {
 
   if (err) return 'an error has occured'
   if (!data) return ''
-  console.log(data)
 
   return (
     <div className='flex flex-col'>
