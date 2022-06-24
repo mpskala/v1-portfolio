@@ -23,9 +23,13 @@ const Dashboard = () => {
         </div> */}
 
         <div className='w-full my-8'>
-          <h2 className='font-bold text-3xl tracking-tight mb-4 text-black dark:text-white'>
+          <h2 className='font-bold text-xl md:text-3xl tracking-tight mb-4 text-black dark:text-white'>
             Strava Data
           </h2>
+          <p className='text-gray-600 dark:text-gray-400 mb-4'>
+            Curious about my running? Here&apos;s my most recent run and
+            all-time totals updated every run.
+          </p>
           <div className='mt-4 flex flex-col'>
             <RecentRun />
             <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
@@ -42,7 +46,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <h2 className='font-bold text-3xl tracking-tight mb-4 text-black dark:text-white'>
+        <h2 className='font-bold text-xl md:text-3xl tracking-tight mb-4 text-black dark:text-white'>
           Top Tracks
         </h2>
         <p className='text-gray-600 dark:text-gray-400 mb-4'>

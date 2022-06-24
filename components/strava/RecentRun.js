@@ -25,7 +25,7 @@ const AllRun = () => {
           <span className='text-xl md:text-3xl'>
             {kmFormatter(data.distance)}
           </span>{' '}
-          <span className='text-sm md:text-base text-gray-500 italic'>
+          <span className='text-sm block md:inline md:text-base text-gray-500 italic'>
             Distance
           </span>
         </div>
@@ -39,7 +39,7 @@ const AllRun = () => {
                   .toISOString()
                   .substring(11, 16)}
           </span>{' '}
-          <span className='text-sm md:text-base text-gray-500 italic'>
+          <span className='text-sm block md:inline md:text-base text-gray-500 italic'>
             Moving Time
           </span>
         </div>
@@ -47,7 +47,7 @@ const AllRun = () => {
           <span className='text-xl md:text-3xl'>
             {mpsFormatter(data.average_speed)}
           </span>{' '}
-          <span className='text-sm md:text-base text-gray-500 italic'>
+          <span className='text-sm block md:inline md:text-base text-gray-500 italic'>
             Pace
           </span>
         </div>
