@@ -10,6 +10,11 @@ const Footer = () => {
         <Link href='/'>
           <a className='text-gray-500 hover:text-gray-600 transition'>Home</a>
         </Link>
+        <Link className='' href='/dashboard'>
+          <a className='block md:hidden text-gray-500 hover:text-gray-600 transition'>
+            Dashboard
+          </a>
+        </Link>
         <Link href='/about'>
           <a className='text-gray-500 hover:text-gray-600 transition'>About</a>
         </Link>

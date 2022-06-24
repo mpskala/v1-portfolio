@@ -59,6 +59,14 @@ export default function MobileMenu() {
           </div>
           <div
             className='border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold'
+            style={{ transitionDelay: '150ms' }}
+          >
+            <Link href='/dashboard'>
+              <a className='flex w-auto py-4'>Dashboard</a>
+            </Link>
+          </div>
+          <div
+            className='border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold'
             style={{ transitionDelay: '250ms' }}
           >
             <Link href='/about'>
