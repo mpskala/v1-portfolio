@@ -8,22 +8,22 @@ const Footer = () => {
       <NowPlaying />
       <div className='w-full max-w-2xl grid grid-cols-1 sm:text-center gap-4 pb-16 sm:grid-cols-3'>
         <Link href='/'>
-          <a className='text-gray-500 betterhover:text-gray-600 transition'>
+          <a className='text-gray-500 betterhover:hover:text-gray-600 transition'>
             Home
           </a>
         </Link>
         <Link className='' href='/dashboard'>
-          <a className='block md:hidden text-gray-500 betterhover:text-gray-600 transition'>
+          <a className='block md:hidden text-gray-500 betterhover:hover:text-gray-600 transition'>
             Dashboard
           </a>
         </Link>
         <Link href='/about'>
-          <a className='text-gray-500 betterhover:text-gray-600 transition'>
+          <a className='text-gray-500 betterhover:hover:text-gray-600 transition'>
             About
           </a>
         </Link>
         <Link href='/blog'>
-          <a className='text-gray-500 betterhover:text-gray-600 transition'>
+          <a className='text-gray-500 betterhover:hover:text-gray-600 transition'>
             Blog
           </a>
         </Link>
