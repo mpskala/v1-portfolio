@@ -27,7 +27,7 @@ const AllRun = () => {
             {kmFormatter(data.distance)}
           </span>{' '}
           <span className='text-sm md:text-base text-gray-500 italic'>
-            Travelled
+            Distance
           </span>
         </div>
         <div className='total-time'>
@@ -35,7 +35,7 @@ const AllRun = () => {
             {new Date(data.moving_time * 1000).toISOString().substr(11, 8)}
           </span>{' '}
           <span className='text-sm md:text-base text-gray-500 italic'>
-            Running
+            Moving Time
           </span>
         </div>
       </div>
