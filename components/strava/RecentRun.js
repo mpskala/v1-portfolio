@@ -37,7 +37,6 @@ const AllRun = ({ units }) => {
   if (err) return 'an error has occured'
   if (!data) return ''
 
-  console.log(units)
   return (
     <div className='flex flex-col'>
       <div className='p-2 flex flex-row gap-2 place-content-evenly text-center'>

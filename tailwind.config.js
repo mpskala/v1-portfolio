@@ -21,6 +21,9 @@ module.exports = {
           900: '#111111',
         },
       },
+      screens: {
+        betterhover: { raw: '(hover: hover)' },
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],
