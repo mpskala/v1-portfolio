@@ -2,9 +2,11 @@ import useSWR from 'swr'
 import fetcher from '/lib/fetcher'
 
 const kmFormatter = (num) => {
-  return Math.abs(num) > 999
-    ? Math.sign(num) * (Math.abs(num) / 1000).toFixed(1) + 'km'
-    : Math.sign(num) * Math.abs(num)
+  return (Math.abs(num) / 1000).toFixed(1) + 'km'
+}
+
+const mileFormatter = (num) => {
+  return (num * 0.000621371192).toFixed(2) + 'mi'
 }
 
 const secondsToHm = (n) => {
@@ -20,7 +22,7 @@ const secondsToHm = (n) => {
   return `${hDisplay}:${mDisplay}:${sDisplay}`
 }
 
-const AllRun = () => {
+const AllRun = ({ units }) => {
   const { data, err } = useSWR('/api/all-time-run', fetcher)
 
   if (err) return 'an error has occured'
@@ -37,7 +39,9 @@ const AllRun = () => {
         </div>
         <div className='total-distance'>
           <span className='text-xl md:text-3xl'>
-            {kmFormatter(data.distance)}
+            {units === 'km'
+              ? kmFormatter(data.distance)
+              : mileFormatter(data.distance)}
           </span>{' '}
           <span className='text-sm block md:inline md:text-base text-gray-500 italic'>
             Distance
