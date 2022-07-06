@@ -17,3 +17,11 @@
 .dark {
   background-color: rgb(17 17 17);
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.progress-bar {
+  transition: 0.2s ease-out;
+}

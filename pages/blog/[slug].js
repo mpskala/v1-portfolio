@@ -5,11 +5,12 @@ import { MDXRemote } from 'next-mdx-remote'
 import { GetPostSlugs, GetPost } from '/lib/getData'
 import Link from 'next/link'
 import Container from '/components/Container'
+import ProgressBar from '/components/ProgressBar'
 
 const Arrow = () => {
   return (
     <Link href='/blog'>
-      <a className='back-arrow flex items-center'>
+      <a className='back-arrow flex items-center betterhover:hover:text-highlight transition-colors duration-300'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='h-6 w-6'
@@ -56,6 +57,7 @@ const Post = ({ post }) => {
             alt=''
             layout='fill'
             objectFit='cover'
+            className='rounded-xl'
           />
         </div>
 
@@ -84,6 +86,8 @@ const Post = ({ post }) => {
             </span>
           ))}
         </div>
+
+        <ProgressBar />
 
         <div className='prose prose-stone prose-xl dark:prose-invert max-w-none'>
           {post.description}
