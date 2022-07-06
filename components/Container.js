@@ -51,6 +51,7 @@ export default function Container(props) {
             <MobileMenu />
             <NavItem href='/' text='Home' />
             <NavItem href='/about' text='About' />
+            <NavItem href='/projects' text='Projects' />
             <NavItem href='/blog' text='Blog' />
           </div>
           <div className='flex space-x-4 items-center'>

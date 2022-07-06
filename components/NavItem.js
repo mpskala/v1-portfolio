@@ -11,9 +11,9 @@ export default function NavItem({ href, text }) {
       <a
         className={cn(
           isActive
-            ? 'font-bold text-gray-800 dark:text-gray-200'
-            : 'font-normal text-gray-600 dark:text-gray-400',
-          'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg betterhover:hover:bg-gray-200 dark:betterhover:hover:bg-gray-800 transition-all'
+            ? 'font-bold text-gray-800 dark:text-gray-200 cursor-default'
+            : 'font-normal text-gray-600 dark:text-gray-400 betterhover:hover:text-highlight transition-colors duration-300',
+          'hidden md:inline-block p-1 sm:px-3 sm:py-2'
         )}
       >
         {text}
