@@ -2,8 +2,8 @@ import { useState } from 'react'
 
 import Container from '/components/Container'
 import TopTracks from '/components/spotify/TopTracks'
-import AllRun from '/components/strava/AllRunning'
-import RecentRun from '/components/strava/RecentRun'
+import AllTimeStravaCards from '/components/metrics/AllTimeStrava'
+import RecentStrava from '/components/metrics/RecentStrava'
 
 const Dashboard = () => {
   const [units, setUnits] = useState('km')
@@ -17,18 +17,31 @@ const Dashboard = () => {
         <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white'>
           Dashboard
         </h1>
-        {/* <div className='mb-8'>
-          <p className='text-gray-600 dark:text-gray-400'>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Perspiciatis qui necessitatibus sunt soluta modi. Dolor perspiciatis
-            suscipit culpa quos modi beatae voluptatem tempore, facilis
-            similique quas facere, est officia? Odio.
-          </p>
-        </div> */}
 
         <div className='w-full my-8'>
           <h2 className='font-bold text-xl md:text-3xl tracking-tight mb-4 text-black dark:text-white'>
-            Strava Data
+            <a
+              className='flex items-center'
+              href='https://www.strava.com/athletes/82192015'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Strava Data
+              <svg
+                className='h-4 w-4 ml-1'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
+                />
+              </svg>
+            </a>
           </h2>
           <p className='text-gray-600 dark:text-gray-400 mb-4'>
             Curious about my running? Here&apos;s my most recent run and
@@ -43,14 +56,14 @@ const Dashboard = () => {
             {units === 'km' ? 'Convert to miles' : 'Convert to kilometers'}
           </button>
           <div className='mt-4 flex flex-col'>
-            <RecentRun units={units} />
+            <RecentStrava units={units} />
             <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
             <span className='w-full text-sm text-gray-500 italic text-center'>
               Most Recent Run
             </span>
           </div>
           <div className='mt-8 flex flex-col'>
-            <AllRun units={units} />
+            <AllTimeStravaCards units={units} />
             <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
             <span className='w-full text-sm text-gray-500 italic text-center'>
               All-Time Strava Running Data
