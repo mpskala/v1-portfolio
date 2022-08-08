@@ -4,6 +4,9 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        Poppins: ['Poppins', 'sans-serif'],
+      },
       colors: {
         subtext: '#403D39',
         maintext: '#252422',
