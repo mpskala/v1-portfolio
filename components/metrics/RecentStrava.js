@@ -3,6 +3,14 @@ import useSWR from 'swr'
 import fetcher from '/lib/fetcher'
 import MetricCard from '/components/metrics/Card'
 
+const formatDate = (date) => {
+  return new Date(date).toLocaleString('en-gb', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+  })
+}
+
 const RecentStrava = ({ units }) => {
   const { data, err } = useSWR('/api/most-recent-run', fetcher)
 
@@ -21,10 +29,16 @@ const RecentStrava = ({ units }) => {
       : mpsFormatter(data.average_speed)
 
   return (
-    <div className='grid gap-4 grid-cols-1 sm:grid-cols-3 my-2 w-full'>
-      <MetricCard header='Distance' metric={distance} />
-      <MetricCard header='Moving Time' metric={movingTime} />
-      <MetricCard header='Pace' metric={pace} />
+    <div className='mt-4 flex flex-col'>
+      <div className='grid gap-4 grid-cols-1 sm:grid-cols-3 my-2 w-full'>
+        <MetricCard header='Distance' metric={distance} />
+        <MetricCard header='Moving Time' metric={movingTime} />
+        <MetricCard header='Pace' metric={pace} />
+      </div>
+      <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
+      <span className='w-full text-sm text-gray-500 italic text-center'>
+        Most Recent Run ({formatDate(data.start_date)})
+      </span>
     </div>
   )
 }

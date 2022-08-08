@@ -14,10 +14,16 @@ const AllTimeStravaCards = ({ units }) => {
   const movingTime = secondsToHm(data.moving_time)
 
   return (
-    <div className='grid gap-4 grid-cols-1 sm:grid-cols-3 my-2 w-full'>
-      <MetricCard header='Total Runs' metric={runs} />
-      <MetricCard header='Distance' metric={distance} />
-      <MetricCard header='Moving Time' metric={movingTime} />
+    <div className='mt-4 flex flex-col'>
+      <div className='grid gap-4 grid-cols-1 sm:grid-cols-3 my-2 w-full'>
+        <MetricCard header='Total Runs' metric={runs} />
+        <MetricCard header='Distance' metric={distance} />
+        <MetricCard header='Moving Time' metric={movingTime} />
+      </div>
+      <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
+      <span className='w-full text-sm text-gray-500 italic text-center'>
+        All-Time Strava Running Data
+      </span>
     </div>
   )
 }

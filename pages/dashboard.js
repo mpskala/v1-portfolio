@@ -55,20 +55,8 @@ const Dashboard = () => {
           >
             {units === 'km' ? 'Convert to miles' : 'Convert to kilometers'}
           </button>
-          <div className='mt-4 flex flex-col'>
-            <RecentStrava units={units} />
-            <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
-            <span className='w-full text-sm text-gray-500 italic text-center'>
-              Most Recent Run
-            </span>
-          </div>
-          <div className='mt-8 flex flex-col'>
-            <AllTimeStravaCards units={units} />
-            <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
-            <span className='w-full text-sm text-gray-500 italic text-center'>
-              All-Time Strava Running Data
-            </span>
-          </div>
+          <RecentStrava units={units} />
+          <AllTimeStravaCards units={units} />
         </div>
 
         <h2 className='font-bold text-xl md:text-3xl tracking-tight mb-4 text-black dark:text-white'>
