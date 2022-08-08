@@ -112,7 +112,7 @@ export default function NowPlaying() {
             <p className='capsize text-gray-800 dark:text-gray-200 font-medium'>
               Not Playing
             </p>
-            <span className='capsize mx-2 text-gray-500 dark:text-gray-300 hidden sm:block'>
+            <span className='capsize mx-2 text-gray-500 dark:text-gray-300 sm:block'>
               {' – '}
             </span>
 
