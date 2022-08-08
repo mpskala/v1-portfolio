@@ -37,19 +37,6 @@ const formatDate = (date) => {
   })
 }
 
-const projectType = (type) => {
-  switch (type) {
-    case 'illustration':
-      return 'Illustration'
-    case 'web_design':
-      return 'Web Design'
-    case 'prototyping':
-      return 'Prototyping'
-    case 'ux_design':
-      return 'UX Design'
-  }
-}
-
 const mdxImage = ({ src, alt }) => {
   return (
     <span className='block h-[35rem] w-full xl:w-[55vw] xl:left-2/4 xl:-translate-x-2/4 my-5 relative xl:max-w-none'>
@@ -68,6 +55,7 @@ const Project = ({ project }) => {
   const components = {
     img: mdxImage,
   }
+
   return (
     <Container>
       <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
@@ -75,33 +63,41 @@ const Project = ({ project }) => {
           <Arrow />
         </div>
 
-        <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white'>
+        <h1 className='font-bold capitalize text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white'>
           {project.title}
         </h1>
 
-        <div className='blog-image h-[35rem] w-full xl:w-[60vw] xl:left-2/4 xl:-translate-x-2/4 my-5 relative xl:max-w-none'>
+        <div className='h-[75vh] my-5 w-full xl:w-[60vw] xl:left-2/4 xl:-translate-x-2/4 relative xl:max-w-none'>
           <Image
             src={project.projectImage.url}
             alt=''
             layout='fill'
+            width='100%'
+            height='100%'
             objectFit='cover'
             className='rounded-xl'
           />
         </div>
 
-        <div className='flex w-full justify-between'>
+        <div className='md:flex w-full justify-between'>
           <div className='left'>
             <div className='project-client my-5'>
-              <div className='tracking-[.15em] font-bold'>CLIENT</div>
-              <div className='client-name'>{project.clientName}</div>
+              <div className='tracking-widest font-medium text-lg'>CLIENT</div>
+              <div className='client-name font-light'>{project.clientName}</div>
             </div>
             <div className='project-type my-5'>
-              <div className='tracking-[.15em] font-bold'>PROJECT TYPE</div>
-              <div className='type'>{projectType(project.projectType)}</div>
+              <div className='tracking-widest font-medium text-lg'>
+                PROJECT TYPE
+              </div>
+              <div className='type font-light capitalize'>
+                {project.projectType.replace(/_/g, ' ')}
+              </div>
             </div>
             <div className='project-year my-5'>
-              <div className='tracking-[.15em] font-bold'>PROJECT DATE</div>
-              <div className='year'>
+              <div className='tracking-widest font-medium text-lg'>
+                PROJECT DATE
+              </div>
+              <div className='year font-light'>
                 {project.startDate === project.endDate
                   ? `${formatDate(project.startDate)}`
                   : `${formatDate(project.startDate)} - ${formatDate(
@@ -110,16 +106,117 @@ const Project = ({ project }) => {
               </div>
             </div>
           </div>
-          <div className='right w-80 my-5'>
-            <div className='description tracking-[.15em] font-bold'>
+          <div className='right w-80 mt-5 mb-10'>
+            <div className='description tracking-widest font-medium text-lg'>
               PROJECT DESCRIPTION
             </div>
-            {project.projectDescription}
+            <div className='font-light'>{project.projectDescription}</div>
           </div>
         </div>
 
-        <div className='prose prose-stone prose-xl dark:prose-invert max-w-2xl mt-5'>
-          {project.description}
+        <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mb-8' />
+
+        <div className='xl:flex xl:flex-col justify-between w-full'>
+          <div className='objective justify-between w-full'>
+            <div className='tracking-wide text-3xl font-medium mb-2'>
+              The Challenge
+            </div>
+            <div
+              className='objective w-full font-light prose prose-xl dark:prose-invert'
+              dangerouslySetInnerHTML={{ __html: `${project.challenge.html}` }}
+            />
+          </div>
+
+          <div className='objective justify-between w-full my-10'>
+            <div className='tracking-wide text-3xl font-medium mb-2'>
+              The Solution
+            </div>
+            <div
+              className='objective w-full font-light prose prose-xl dark:prose-invert'
+              dangerouslySetInnerHTML={{ __html: `${project.solution.html}` }}
+            />
+          </div>
+
+          <div className='objective justify-between w-full'>
+            <div className='tracking-wide text-3xl font-medium mb-2'>
+              The Impact
+            </div>
+            <div
+              className='objective w-full font-light prose prose-xl dark:prose-invert'
+              dangerouslySetInnerHTML={{ __html: `${project.results.html}` }}
+            />
+          </div>
+        </div>
+
+        <div className='objective justify-between w-full my-10'>
+          <div className='tracking-wide text-3xl font-medium mb-2'>
+            Scope of Work
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 prose dark:prose-invert'>
+            {project.discovery ? (
+              <div className='discovery'>
+                <h3 className='font-medium'>Discovery</h3>
+                {project.discovery.map((i) => (
+                  <span className='block' key={i}>
+                    {i}
+                  </span>
+                ))}
+              </div>
+            ) : (
+              ''
+            )}
+            {project.strategy ? (
+              <div className='strategy'>
+                <h3 className='font-medium'>Strategy</h3>
+                {project.strategy.map((i) => (
+                  <span className='block' key={i}>
+                    {i.replace(/_/g, ' ')}
+                  </span>
+                ))}
+              </div>
+            ) : (
+              ''
+            )}
+            {project.design ? (
+              <div className='design'>
+                <h3 className='font-medium'>Design</h3>
+                {project.design.map((i) => (
+                  <span className='block' key={i}>
+                    {i.replace(/_/g, ' ')}
+                  </span>
+                ))}
+              </div>
+            ) : (
+              ''
+            )}
+            {project.develop ? (
+              <div className='develop'>
+                <h3 className='font-medium'>Develop</h3>
+                {project.develop.map((i) => (
+                  <span className='block' key={i}>
+                    {i.replace(/_/g, ' ').replace(/0/g, '-')}
+                  </span>
+                ))}
+              </div>
+            ) : (
+              ''
+            )}
+            {project.launch ? (
+              <div className='launch'>
+                <h3 className='font-medium'>Launch</h3>
+                {project.launch.map((i) => (
+                  <span className='block' key={i}>
+                    {i.replace(/_/g, ' ')}
+                  </span>
+                ))}
+              </div>
+            ) : (
+              ''
+            )}
+          </div>
+        </div>
+
+        <div className='prose font-light prose-xl dark:prose-invert max-w-2xl mt-5'>
           <MDXRemote {...project.source} components={components} />
         </div>
       </div>
