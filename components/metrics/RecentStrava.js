@@ -12,21 +12,21 @@ const formatDate = (date) => {
 }
 
 const RecentStrava = ({ units }) => {
-  const { data, err } = useSWR('/api/most-recent-run', fetcher)
+  const { data } = useSWR('/api/most-recent-run', fetcher)
 
-  if (err) return 'an error has occured'
-  if (!data) return ''
-
-  const distance =
-    units === 'km' ? kmFormatter(data.distance) : mileFormatter(data.distance)
+  const distance = data?.distance
+    ? units === 'km'
+      ? kmFormatter(data?.distance)
+      : mileFormatter(data?.distance)
+    : 0
+  const date = data ? new Date(data.moving_time * 1000).toISOString() : ''
   const movingTime =
-    data.moving_time < 3600
-      ? new Date(data.moving_time * 1000).toISOString().substring(14, 19)
-      : new Date(data.moving_time * 1000).toISOString().substring(11, 16)
-  const pace =
-    units === 'km'
-      ? kpsFormatter(data.average_speed)
-      : mpsFormatter(data.average_speed)
+    data?.moving_time < 3600 ? date.substring(14, 19) : date.substring(11, 16)
+  const pace = data?.average_speed
+    ? units === 'km'
+      ? kpsFormatter(data?.average_speed)
+      : mpsFormatter(data?.average_speed)
+    : 0
 
   return (
     <div className='mt-4 flex flex-col'>
@@ -37,7 +37,7 @@ const RecentStrava = ({ units }) => {
       </div>
       <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
       <span className='w-full text-sm text-gray-500 italic text-center'>
-        Most Recent Run ({formatDate(data.start_date)})
+        Most Recent Run ({formatDate(data?.start_date)})
       </span>
     </div>
   )

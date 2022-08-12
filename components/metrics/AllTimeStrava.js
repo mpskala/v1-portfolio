@@ -6,12 +6,13 @@ import MetricCard from '/components/metrics/Card'
 const AllTimeStravaCards = ({ units }) => {
   const { data } = useSWR('/api/all-time-run', fetcher)
 
-  if (!data) return ''
-
-  const runs = data.count
-  const distance =
-    units === 'km' ? kmFormatter(data.distance) : mileFormatter(data.distance)
-  const movingTime = secondsToHm(data.moving_time)
+  const runs = data?.count
+  const distance = data?.distance
+    ? units === 'km'
+      ? kmFormatter(data?.distance)
+      : mileFormatter(data?.distance)
+    : 0
+  const movingTime = data?.moving_time ? secondsToHm(data?.moving_time) : 0
 
   return (
     <div className='mt-4 flex flex-col'>
