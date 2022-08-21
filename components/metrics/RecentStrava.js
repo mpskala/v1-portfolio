@@ -30,11 +30,15 @@ const RecentStrava = ({ units }) => {
 
   return (
     <div className='mt-4 flex flex-col'>
+      <h3 className='font-bold text-xl'>{data?.name}</h3>
       <div className='grid gap-4 grid-cols-1 sm:grid-cols-3 my-2 w-full'>
         <MetricCard header='Distance' metric={distance} />
         <MetricCard header='Moving Time' metric={movingTime} />
         <MetricCard header='Pace' metric={pace} />
       </div>
+      <p className='text-gray-600 dark:text-gray-400 mb-4'>
+        {data?.description}
+      </p>
       <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
       <span className='w-full text-sm text-gray-500 italic text-center'>
         Most Recent Run ({formatDate(data?.start_date)})
