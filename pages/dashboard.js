@@ -64,7 +64,7 @@ const Dashboard = () => {
         </h2>
         <p className='text-gray-600 dark:text-gray-400 mb-4'>
           Curious what I&apos;m currently jamming to? Here&apos;s my top tracks
-          on Spotify updated daily.
+          from Spotify over the last 30 days.
         </p>
         <TopTracks />
       </div>
