@@ -17,7 +17,6 @@ const formatDate = (date) => {
   }
 
   return runDate.toLocaleString('en-gb', {
-    weekday: 'short',
     day: '2-digit',
     month: 'short',
     year: 'numeric',
