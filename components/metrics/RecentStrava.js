@@ -4,7 +4,20 @@ import fetcher from '/lib/fetcher'
 import MetricCard from '/components/metrics/Card'
 
 const formatDate = (date) => {
-  return new Date(date).toLocaleString('en-gb', {
+  const today = new Date()
+  const yesterday = new Date()
+  const runDate = new Date(date)
+
+  yesterday.setDate(today.getDate() - 1)
+
+  if (today.toDateString() === runDate.toDateString()) {
+    return 'Today'
+  } else if (yesterday.toDateString() === runDate.toDateString()) {
+    return 'Yesterday'
+  }
+
+  return runDate.toLocaleString('en-gb', {
+    weekday: 'short',
     day: '2-digit',
     month: 'short',
     year: 'numeric',
