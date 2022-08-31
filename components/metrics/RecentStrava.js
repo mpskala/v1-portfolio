@@ -49,7 +49,7 @@ const RecentStrava = ({ units }) => {
       </div>
       <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
       <span className='w-full text-sm text-gray-500 italic text-center'>
-        Most Recent Run ({formatDate(data?.start_date)})
+        Most Recent Run {date ? `(${formatDate(data?.start_date)})` : ''}
       </span>
     </div>
   )
