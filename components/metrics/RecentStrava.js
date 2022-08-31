@@ -21,7 +21,7 @@ const RecentStrava = ({ units }) => {
     : 0
   const date = data ? new Date(data.moving_time * 1000).toISOString() : ''
   const movingTime =
-    data?.moving_time < 3600 ? date.substring(14, 19) : date.substring(11, 16)
+    data?.moving_time < 3600 ? date.substring(14, 19) : date.substring(11, 19)
   const pace = data?.average_speed
     ? units === 'km'
       ? kpsFormatter(data?.average_speed)
@@ -48,7 +48,7 @@ const RecentStrava = ({ units }) => {
 }
 
 const kmFormatter = (num) => {
-  return (Math.abs(num) / 1000).toFixed(1) + 'km'
+  return (Math.abs(num) / 1000).toFixed(2) + 'km'
 }
 
 const mileFormatter = (num) => {
@@ -61,7 +61,8 @@ const kpsFormatter = (num) => {
   const minutes = kpsDecimal - leftover
   const seconds = Math.round(leftover * 60)
 
-  const paceKM = `${minutes}:${seconds}/km`
+  const paceKM =
+    seconds < 10 ? `${minutes}:0${seconds}/km` : `${minutes}:${seconds}/km`
 
   return paceKM
 }
