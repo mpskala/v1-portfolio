@@ -10,9 +10,9 @@ const formatDate = (date) => {
 
   yesterday.setDate(today.getDate() - 1)
 
-  if (today.toDateString() === runDate.toDateString()) {
+  if (runDate.toDateString() === today.toDateString()) {
     return 'Today'
-  } else if (yesterday.toDateString() === runDate.toDateString()) {
+  } else if (runDate.toDateString() === yesterday.toDateString()) {
     return 'Yesterday'
   }
 
