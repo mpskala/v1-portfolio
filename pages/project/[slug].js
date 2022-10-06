@@ -81,10 +81,19 @@ const Project = ({ project }) => {
 
         <div className='md:flex w-full justify-between'>
           <div className='left'>
-            <div className='project-client my-5'>
-              <div className='tracking-widest font-medium text-lg'>CLIENT</div>
-              <div className='client-name font-light'>{project.clientName}</div>
-            </div>
+            {project.clientName ? (
+              <div className='project-client my-5'>
+                <div className='tracking-widest font-medium text-lg'>
+                  CLIENT
+                </div>
+                <div className='client-name font-light'>
+                  {project.clientName}
+                </div>
+              </div>
+            ) : (
+              ''
+            )}
+
             <div className='project-type my-5'>
               <div className='tracking-widest font-medium text-lg'>
                 PROJECT TYPE
@@ -191,7 +200,7 @@ const Project = ({ project }) => {
             )}
             {project.develop ? (
               <div className='develop'>
-                <h3 className='font-medium'>Develop</h3>
+                <h3 className='font-medium'>Development</h3>
                 {project.develop.map((i) => (
                   <span className='block' key={i}>
                     {i.replace(/_/g, ' ').replace(/0/g, '-')}
