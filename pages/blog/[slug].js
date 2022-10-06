@@ -6,6 +6,7 @@ import { GetPostSlugs, GetPost } from '/lib/getData'
 import Link from 'next/link'
 import Container from '/components/Container'
 import ProgressBar from '/components/ProgressBar'
+import readingTime from 'reading-time'
 
 const Arrow = () => {
   return (
@@ -39,7 +40,8 @@ const formatDate = (date) => {
   })
 }
 
-const Post = ({ post }) => {
+const Post = ({ post, readingTime }) => {
+  console.log(readingTime)
   return (
     <Container>
       <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
@@ -73,7 +75,9 @@ const Post = ({ post }) => {
             />
             <p className='ml-4 text-lg font-semibold'>{post.author.name}</p>
           </div>
-          <p className=''>{formatDate(post.datePublished)}</p>
+          <p className=''>
+            {readingTime} • {formatDate(post.datePublished)}
+          </p>
         </div>
 
         <div className='flex space-x-3 my-4'>
@@ -103,7 +107,10 @@ export const getStaticProps = async ({ params }) => {
   const source = await serialize(data.post.content)
 
   return {
-    props: { post: { ...data.post, source } },
+    props: {
+      post: { ...data.post, source },
+      readingTime: readingTime(data.post.content).text,
+    },
   }
 }
 
