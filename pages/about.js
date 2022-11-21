@@ -11,13 +11,14 @@ export default function About() {
         <div className='mb-8 prose leading-6 text-gray-600 dark:text-gray-400'>
           <p>
             Hey, I&apos;m Matt 👋🏻. I&apos;m a developer and an avid gym rat
-            currently travelling around South East Asia.
+            currently looking for a job within the software / web developer
+            space.
           </p>
           <p>
             I grew up in Manchester, England and went to Manchester Metropolitan
-            University, graduating with a degree in Computer Science. I usually
-            spend my free time playing games 🎮, at the gym 🏋️‍♀️, listening to
-            music 🎵 and enjoying time with friends.
+            University, graduating with a degree in Computer Science. You can
+            find me spending my free time playing games 🎮, at the gym 🏋️‍♀️,
+            listening to music 🎵 and relaxing with friends.
           </p>
         </div>
 

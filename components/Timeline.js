@@ -43,6 +43,18 @@ const Step = (props) => {
 const FullTimeline = () => (
   <>
     <Divider />
+    <Year>2019</Year>
+    <ul>
+      <Step title='Started my First Professional Project'>
+        It&apos;s a weird feeling being a contractor for a real company. my only
+        experience so far is creating projects for fake companies.
+      </Step>
+      <Step title='Completed my First Year of Uni'>
+        First year seemed to have flown by. I hope the rest of my time here
+        isn&apos;t bad.
+      </Step>
+    </ul>
+    <Divider />
     <Year>2018</Year>
     <ul>
       <Step title='Started at Brookdale Golf Club 🏌🏻‍♂️'>
@@ -124,6 +136,10 @@ export default function Timeline() {
       </h3>
       <Year>2022</Year>
       <ul>
+        <Step title='Travelled back home 🇬🇧'>
+          After 7 months away in some of the most beautiful countries I&apos;ve
+          ever seen, I&apos;m ready to come back home and get back to work.
+        </Step>
         <Step title='Trained Muay Thai 🥊'>
           The art of the 8 limbs is no joke, I had my fair share of injuries,
           but with access to the best teachers I still got effective training
@@ -144,7 +160,8 @@ export default function Timeline() {
         </Step>
         <Step title='Left Brookdale Golf Club ⛳️'>
           Whilst I learnt a lot working here, it was always going to be
-          temporary. It&apos;s time to move onto something to do with my degree.
+          temporary. It&apos;s time to move onto a job based around my passion,
+          utilising my newly acquired degree.
         </Step>
         <Step title="Graduated with my Bachelor's Degree 🎓">
           After three years of studying, I can finally say I&apos;ve completed
@@ -165,18 +182,6 @@ export default function Timeline() {
         <Step title='Started Kickboxing Training 🥊'>
           I&apos;ve always enjoyed watching the UFC and ONE championship, so why
           not learn a combat sport myself?
-        </Step>
-      </ul>
-      <Divider />
-      <Year>2019</Year>
-      <ul>
-        <Step title='Started my First Professional Project'>
-          It&apos;s a weird feeling being a contractor for a real company. my
-          only experience so far is creating projects for fake companies.
-        </Step>
-        <Step title='Completed my First Year of Uni'>
-          First year seemed to have flown by. I hope the rest of my time here
-          isn&apos;t bad.
         </Step>
       </ul>
       {isShowingFullTimeline ? (
