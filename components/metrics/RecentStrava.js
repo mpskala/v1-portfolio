@@ -81,7 +81,8 @@ const mpsFormatter = (num) => {
   const minutes = mpsDecimal - leftover
   const seconds = Math.round(leftover * 60)
 
-  const paceM = `${minutes}:${seconds}/mi`
+  const paceM =
+    seconds < 10 ? `${minutes}:0${seconds}/mi` : `${minutes}:${seconds}/mi`
 
   return paceM
 }
