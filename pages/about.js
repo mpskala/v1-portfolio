@@ -11,8 +11,7 @@ export default function About() {
         <div className='mb-8 prose leading-6 text-gray-600 dark:text-gray-400'>
           <p>
             Hey, I&apos;m Matt 👋🏻. I&apos;m a developer and an avid gym rat
-            currently looking for a job within the software / web developer
-            space.
+            currently working as a web developer for FootAsylum.
           </p>
           <p>
             I grew up in Manchester, England and went to Manchester Metropolitan

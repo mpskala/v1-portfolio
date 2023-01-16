@@ -12,16 +12,20 @@ export default function Home() {
               Matthew Skala
             </h1>
             <h2 className='text-gray-700 dark:text-gray-200 mb-4'>
-              Travelling
+              Web Developer at{' '}
+              <a
+                href='https://www.footasylum.com/'
+                className='font-bold hover:text-orange-500'
+                target='_blank'
+                rel='noreferrer'
+              >
+                FootAsylum
+              </a>
             </h2>
-            <p className='text-gray-600 dark:text-gray-400 mb-16'>
-              Enthusiastic and dedicated computer science graduate &mdash;
-              currently travelling South East Asia.
-            </p>
           </div>
           <div className='w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto'>
             <Image
-              alt='Lee Robinson'
+              alt='Matt Skala'
               height={176}
               width={176}
               src='/avatar.jpg'

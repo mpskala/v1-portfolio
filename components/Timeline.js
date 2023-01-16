@@ -43,6 +43,19 @@ const Step = (props) => {
 const FullTimeline = () => (
   <>
     <Divider />
+    <Year>2020</Year>
+    <ul>
+      <Step title='Completed my Second Year of Uni'>Two down; One to go.</Step>
+      <Step title='Handed Over my First Professional Project 🏁'>
+        I&apos;m excited to work with companies like Tyrrell Products Ltd. in
+        the future. They were very accomodating for our group and our questions.
+      </Step>
+      <Step title='Started Kickboxing Training 🥊'>
+        I&apos;ve always enjoyed watching the UFC and ONE championship, so why
+        not learn a combat sport myself?
+      </Step>
+    </ul>
+    <Divider />
     <Year>2019</Year>
     <ul>
       <Step title='Started my First Professional Project'>
@@ -134,6 +147,15 @@ export default function Timeline() {
       <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white'>
         Timeline
       </h3>
+      <Year>2023</Year>
+      <ul>
+        <Step title='Landed a web dev role 💻'>
+          After an awful time job seeking through the Christmas / New Years
+          period, I&apos;m glad to say I have landed myself a web developer job
+          at FootAsylum.
+        </Step>
+      </ul>
+      <Divider />
       <Year>2022</Year>
       <ul>
         <Step title='Travelled back home 🇬🇧'>
@@ -152,6 +174,7 @@ export default function Timeline() {
           definitely be a culture shock.
         </Step>
       </ul>
+      <Divider />
       <Year>2021</Year>
       <ul>
         <Step title='Joined PayStream'>
@@ -166,22 +189,6 @@ export default function Timeline() {
         <Step title="Graduated with my Bachelor's Degree 🎓">
           After three years of studying, I can finally say I&apos;ve completed
           it.
-        </Step>
-      </ul>
-      <Divider />
-      <Year>2020</Year>
-      <ul>
-        <Step title='Completed my Second Year of Uni'>
-          Two down; One to go.
-        </Step>
-        <Step title='Handed Over my First Professional Project 🏁'>
-          I&apos;m excited to work with companies like Tyrrell Products Ltd. in
-          the future. They were very accomodating for our group and our
-          questions.
-        </Step>
-        <Step title='Started Kickboxing Training 🥊'>
-          I&apos;ve always enjoyed watching the UFC and ONE championship, so why
-          not learn a combat sport myself?
         </Step>
       </ul>
       {isShowingFullTimeline ? (
