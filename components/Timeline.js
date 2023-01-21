@@ -151,8 +151,7 @@ export default function Timeline() {
       <ul>
         <Step title='Landed a web dev role 💻'>
           After an awful time job seeking through the Christmas / New Years
-          period, I&apos;m glad to say I have landed myself a web developer job
-          at FootAsylum.
+          period, I&apos;m glad to say I have landed myself a job once again.
         </Step>
       </ul>
       <Divider />

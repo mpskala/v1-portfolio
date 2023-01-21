@@ -15,9 +15,9 @@ export default function About() {
           </p>
           <p>
             I grew up in Manchester, England and went to Manchester Metropolitan
-            University, graduating with a degree in Computer Science. You can
-            find me spending my free time playing games 🎮, at the gym 🏋️‍♀️,
-            listening to music 🎵 and relaxing with friends.
+            University, graduating with a Bachelor&apos;s in Computer Science.
+            You can find me spending my free time playing games 🎮, at the gym
+            🏋️‍♀️, listening to music 🎵 and relaxing with friends.
           </p>
         </div>
 
