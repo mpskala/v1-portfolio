@@ -41,7 +41,6 @@ const formatDate = (date) => {
 }
 
 const Post = ({ post, readingTime }) => {
-  console.log(readingTime)
   return (
     <Container>
       <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
