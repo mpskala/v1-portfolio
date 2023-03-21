@@ -5,29 +5,35 @@
 @tailwind utilities;
 
 .skip-nav {
-  @apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 -left-1/4 focus:top-4 focus:translate-y-3 -top-8;
+	@apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 -left-1/4 focus:top-4 focus:translate-y-3 -top-8;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 #skip {
-  scroll-margin-top: 1.125rem;
+	scroll-margin-top: 1.125rem;
 }
 
 .light {
-  background-color: rgb(249 250 251);
+	background-color: rgb(249 250 251);
 }
 
 .dark {
-  background-color: rgb(17 17 17);
+	background-color: rgb(17 17 17);
 }
 
 body::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 .progress-bar {
-  transition: 0.2s ease-out;
+	transition: 0.2s ease-out;
+}
+
+@media (min-width: 640px) {
+	.main {
+		height: 15rem;
+	}
 }
