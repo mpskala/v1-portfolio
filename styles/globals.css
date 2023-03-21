@@ -42,6 +42,5 @@ body::-webkit-scrollbar {
 @media (min-width: 640px) {
 	.main {
 		height: 15rem;
-		width: 28.5rem;
 	}
 }

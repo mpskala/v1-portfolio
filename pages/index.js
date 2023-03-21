@@ -7,7 +7,7 @@ export default function Home() {
 		<Container>
 			<div
 				className='main flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16'
-				style={{ height: '16rem', width: '17.5rem' }}
+				style={{ height: '16rem' }}
 			>
 				<div className='flex flex-col-reverse sm:flex-row items-start'>
 					<div className='flex flex-col pr-8'>
