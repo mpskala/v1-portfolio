@@ -38,9 +38,3 @@ body::-webkit-scrollbar {
 .progress-bar {
 	transition: 0.2s ease-out;
 }
-
-@media (min-width: 640px) {
-	.main {
-		height: 15rem;
-	}
-}
