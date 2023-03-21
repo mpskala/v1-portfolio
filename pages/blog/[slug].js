@@ -52,7 +52,7 @@ const Post = ({ post, readingTime }) => {
           {post.title}
         </h1>
 
-        <div className='blog-image h-[35rem] w-full xl:w-[60vw] xl:left-2/4 xl:-translate-x-2/4 my-2 relative xl:max-w-none'>
+        <div className='blog-image h-72 md:h-[36rem] w-full my-2 relative xl:max-w-none'>
           <Image
             src={post.coverImage.url}
             alt=''
