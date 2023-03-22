@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	darkMode: 'class',
-	purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+	content: [
+		'./pages/**/*.{js,ts,jsx,tsx}',
+		'./components/**/*.{js,ts,jsx,tsx}',
+	],
 	theme: {
 		extend: {
 			fontFamily: {
@@ -10,7 +13,8 @@ module.exports = {
 			colors: {
 				subtext: '#403D39',
 				maintext: '#252422',
-				highlight: '#EB5E28',
+				lightHighlight: '#EB2828',
+				darkHighlight: '#1D9FCF',
 				gray: {
 					0: '#fff',
 					100: '#fafafa',

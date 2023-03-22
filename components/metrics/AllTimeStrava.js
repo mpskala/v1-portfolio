@@ -15,8 +15,8 @@ const AllTimeStravaCards = ({ units }) => {
 	const movingTime = data?.moving_time ? secondsToHm(data?.moving_time) : 0
 
 	return (
-		<div className='mt-4 flex flex-col'>
-			<div className='grid gap-4 grid-cols-1 sm:grid-cols-3 my-2 w-full'>
+		<div className='mt-8 flex flex-col'>
+			<div className='grid gap-4 grid-cols-1 sm:grid-cols-3 w-full'>
 				<MetricCard header='Total Runs' metric={runs} />
 				<MetricCard header='Distance' metric={distance} />
 				<MetricCard header='Moving Time' metric={movingTime} />

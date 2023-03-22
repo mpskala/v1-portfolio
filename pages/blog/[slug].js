@@ -11,7 +11,7 @@ import readingTime from 'reading-time'
 const Arrow = () => {
 	return (
 		<Link href='/blog'>
-			<a className='back-arrow flex items-center betterhover:hover:text-highlight transition-colors duration-300'>
+			<a className='back-arrow flex items-center betterhover:hover:text-lightHighlight dark:group-hover:text-darkHighlight transition-colors duration-300'>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
 					className='h-6 w-6'

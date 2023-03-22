@@ -52,7 +52,7 @@ const Dashboard = () => {
 					<button
 						aria-label='Toggle KM or Miles'
 						type='button'
-						className='betterhover:hover:text-highlight transition-colors duration-300'
+						className='betterhover:hover:text-lightHighlight dark:betterhover:hover:text-darkHighlight transition-colors duration-300'
 						onClick={() => setUnits(units === 'km' ? 'miles' : 'km')}
 					>
 						{units === 'km' ? 'Convert to miles' : 'Convert to kilometers'}

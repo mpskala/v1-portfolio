@@ -1,7 +1,12 @@
 import useSWR from 'swr'
+import dynamic from 'next/dynamic'
 
 import fetcher from '/lib/fetcher'
-import MetricCard from '/components/metrics/Card'
+import MetricCard from './Card'
+
+const Map = dynamic(() => import('/components/Map'), {
+	ssr: false,
+})
 
 const formatDate = (date) => {
 	const today = new Date()
@@ -41,11 +46,14 @@ const RecentStrava = ({ units }) => {
 		: 0
 
 	return (
-		<div className='mt-4 flex flex-col'>
-			<div className='grid gap-4 grid-cols-1 sm:grid-cols-3 my-2 w-full'>
+		<div className='mt-8 flex flex-col'>
+			<div className='grid gap-4 grid-cols-1 sm:grid-cols-3 w-full'>
 				<MetricCard header='Distance' metric={distance} />
 				<MetricCard header='Moving Time' metric={movingTime} />
 				<MetricCard header='Pace' metric={pace} />
+				<div className='sm:col-span-3 w-full h-60 md:h-96 z-0'>
+					<Map data={data} />
+				</div>
 			</div>
 			<hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
 			<span className='w-full text-sm text-gray-500 italic text-center'>

@@ -4,7 +4,7 @@ import NowPlaying from '/components/spotify/NowPlaying'
 const FooterLink = ({ href, text }) => {
 	return (
 		<Link href={href}>
-			<a className='text-gray-500 betterhover:hover:text-highlight transition-colors duration-300'>
+			<a className='text-gray-500 betterhover:hover:text-lightHighlight dark:betterhover:hover:text-darkHighlight transition-colors duration-300'>
 				{text}
 			</a>
 		</Link>
@@ -19,7 +19,7 @@ const Footer = () => {
 			<div className='w-full max-w-2xl grid grid-cols-1 sm:text-center gap-4 pb-16 sm:grid-cols-4'>
 				<FooterLink href='/' text={'Home'} />
 				<Link href='/dashboard'>
-					<a className='block md:hidden text-gray-500 betterhover:hover:text-highlight transition-colors duration-300'>
+					<a className='block md:hidden text-gray-500 betterhover:hover:text-lightHighlight dark:betterhover:hover:text-darkHighlight transition-colors duration-300'>
 						Dashboard
 					</a>
 				</Link>

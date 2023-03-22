@@ -38,3 +38,8 @@ body::-webkit-scrollbar {
 .progress-bar {
 	transition: 0.2s ease-out;
 }
+
+.leaflet-container {
+	height: 100%;
+	width: 100%;
+}
