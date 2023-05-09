@@ -10,7 +10,7 @@ const Dashboard = () => {
 
   return (
     <Container
-      title='Matthew Skala - Dashboard.'
+      title='Matthew Skala — Dashboard.'
       description='My personal dashboard.'
     >
       <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>

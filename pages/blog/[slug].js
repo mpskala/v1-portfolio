@@ -42,7 +42,7 @@ const formatDate = (date) => {
 
 const Post = ({ post, readingTime }) => {
   return (
-    <Container>
+    <Container title={`Matthew Skala — ${post.title}.`}>
       <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
         <div className='back w-20 mb-4'>
           <Arrow />
