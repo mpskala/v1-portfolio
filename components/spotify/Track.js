@@ -11,11 +11,11 @@ const Track = (track) => {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <p className='font-medium text-gray-900 dark:text-gray-100 truncate w-60 sm:w-96 md:w-full'>
+          <p className='break-words whitespace-normal font-medium text-gray-900 dark:text-gray-100 truncate w-60 sm:w-96 md:w-full'>
             {track.title}
           </p>
           <p
-            className='text-gray-500 mb-4 truncate w-60 sm:w-96 md:w-full'
+            className='break-words whitespace-normal text-gray-500 mb-4 truncate w-60 sm:w-96 md:w-full'
             color='gray.500'
           >
             {track.artist}

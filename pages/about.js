@@ -10,8 +10,8 @@ export default function About() {
         </h1>
         <div className='mb-8 prose leading-6 text-gray-600 dark:text-gray-400'>
           <p>
-            Hey, I&apos;m Matt 👋🏻. I&apos;m a developer and an avid gym rat
-            currently working as a web developer for FootAsylum.
+            Hey, I&apos;m Matt 👋🏻 a front-end web developer and an avid gym rat
+            currently working for FootAsylum.
           </p>
           <p>
             I grew up in Manchester, England and went to Manchester Metropolitan

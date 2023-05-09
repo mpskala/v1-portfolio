@@ -149,6 +149,10 @@ export default function Timeline() {
       </h3>
       <Year>2023</Year>
       <ul>
+        <Step title='Created the Entertainment Hub 📱'>
+          Created the newest addition to the FootAsylum App where we host new
+          &amp; exclusive content for our app users.
+        </Step>
         <Step title='Landed a web dev role 💻'>
           After an awful time job seeking through the Christmas / New Years
           period, I&apos;m glad to say I have landed myself a job once again.
