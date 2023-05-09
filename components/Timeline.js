@@ -144,9 +144,9 @@ export default function Timeline() {
 
   return (
     <>
-      <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white'>
+      <h2 className='font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white'>
         Timeline
-      </h3>
+      </h2>
       <Year>2023</Year>
       <ul>
         <Step title='Created the Entertainment Hub 📱'>
