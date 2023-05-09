@@ -12,14 +12,14 @@ const AllTimeStravaCards = ({ units }) => {
       ? kmFormatter(data?.distance)
       : mileFormatter(data?.distance)
     : 0
-  const movingTime = data?.moving_time ? secondsToHm(data?.moving_time) : 0
+  const duration = data?.elapsed_time ? secondsToHm(data?.elapsed_time) : 0
 
   return (
     <div className='mt-8 flex flex-col'>
       <div className='grid gap-4 grid-cols-1 sm:grid-cols-3 w-full'>
         <MetricCard header='Total Runs' metric={runs} />
         <MetricCard header='Distance' metric={distance} />
-        <MetricCard header='Moving Time' metric={movingTime} />
+        <MetricCard header='Total Duration' metric={duration} />
       </div>
       <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
       <span className='w-full text-sm text-gray-500 italic text-center'>

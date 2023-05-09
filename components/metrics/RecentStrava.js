@@ -30,15 +30,16 @@ const formatDate = (date) => {
 
 const RecentStrava = ({ units }) => {
   const { data } = useSWR('/api/most-recent-run', fetcher)
+  console.log('recent strava', data)
 
   const distance = data?.distance
     ? units === 'km'
       ? kmFormatter(data?.distance)
       : mileFormatter(data?.distance)
     : 0
-  const date = data ? new Date(data.moving_time * 1000).toISOString() : ''
-  const movingTime =
-    data?.moving_time < 3600 ? date.substring(14, 19) : date.substring(11, 19)
+  const date = data ? new Date(data.elapsed_time * 1000).toISOString() : ''
+  const duration =
+    data?.elapsed_time < 3600 ? date.substring(14, 19) : date.substring(11, 19)
   const pace = data?.average_speed
     ? units === 'km'
       ? kpsFormatter(data?.average_speed)
@@ -49,7 +50,7 @@ const RecentStrava = ({ units }) => {
     <div className='mt-8 flex flex-col'>
       <div className='grid gap-4 grid-cols-1 sm:grid-cols-3 w-full'>
         <MetricCard header='Distance' metric={distance} />
-        <MetricCard header='Moving Time' metric={movingTime} />
+        <MetricCard header='Duration' metric={duration} />
         <MetricCard header='Pace' metric={pace} />
         <div className='sm:col-span-3 w-full h-60 md:h-96 z-0'>
           <Map data={data} />
