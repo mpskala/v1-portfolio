@@ -30,7 +30,6 @@ const formatDate = (date) => {
 
 const RecentStrava = ({ units }) => {
   const { data } = useSWR('/api/most-recent-run', fetcher)
-  console.log('recent strava', data)
 
   const distance = data?.distance
     ? units === 'km'
