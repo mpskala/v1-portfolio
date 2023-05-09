@@ -18,7 +18,7 @@ const AllTimeStravaCards = ({ units }) => {
     <div className='mt-8 flex flex-col'>
       <div className='grid gap-4 grid-cols-1 sm:grid-cols-3 w-full'>
         <MetricCard header='Total Runs' metric={runs} />
-        <MetricCard header='Distance' metric={distance} />
+        <MetricCard header='Total Distance' metric={distance} />
         <MetricCard header='Total Duration' metric={duration} />
       </div>
       <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
