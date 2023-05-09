@@ -22,7 +22,7 @@ const AllTimeStravaCards = ({ units }) => {
         <MetricCard header='Total Duration' metric={duration} />
       </div>
       <hr className='w-full border-1 border-gray-200 dark:border-gray-800 mt-4 mb-2' />
-      <span className='w-full text-sm text-gray-500 italic text-center'>
+      <span className='w-full text-sm text-gray-600 dark:text-gray-400 italic text-center'>
         All-Time Strava Running Data
       </span>
     </div>
