@@ -28,7 +28,7 @@ export default function Home() {
               href='/pdf/cv.pdf'
               locale={false}
             >
-              Download CV
+              View CV
             </Link>
           </div>
           <div className='w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto'>
