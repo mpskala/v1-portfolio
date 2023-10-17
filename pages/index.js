@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import Container from '../components/Container'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -22,13 +23,13 @@ export default function Home() {
                 FootAsylum
               </a>
             </h2>
-            <a
+            <Link
               className='px-4 py-2 border-orange-500 transition-all border border-solid text-orange-500 w-fit rounded hover:bg-orange-500 hover:text-white'
-              download
-              href='/cv.pdf'
+              href='/pdf/cv.pdf'
+              locale={false}
             >
-              View CV
-            </a>
+              Download CV
+            </Link>
           </div>
           <div className='w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto'>
             <Image
